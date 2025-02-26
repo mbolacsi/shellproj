@@ -147,12 +147,14 @@ bool do_builtin(struct shell *sh, char **argv) {
         return true;
     } else {
         // Look at all the 3 things you can do!!!!
+        if(strcmp(argv[0], "ls") != 0){ // NOW ITS 4!!! Thanks for the tip Aarik, u the GOAT! ls be working✨🔥✨
         printf("Unknown command: %s\n", argv[0]);
         printf("Available commands:\n");
         printf("  exit    - Exit the shell\n");
         printf("  cd      - Change the current directory\n");
         printf("  clear      - Clear the terminal\n");
         printf("  history - Display the command history\n");
+        }
         return false;
     }
 }
